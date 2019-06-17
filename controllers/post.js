@@ -13,12 +13,16 @@ exports.getbankdetails=(req,res)=>{
 		offset=null;
 	const ifsc=req.query.IFSC_code;
 	//console.log(ifsc);
-	const client=new Client({
+/*const client=new Client({
 		user:'postgres',
 		host:'localhost',
 		database:'newdb',
 		password:'password',
 		port:5432,
+	});*/
+	const client=new Pool({
+		connectionString:process.env.DATABASE_URL,
+		ssl:true
 	});
 
 	client.connect();
@@ -54,12 +58,16 @@ exports.getbranchdetails=(req,res)=>{
 
 	const bank_name=req.query.bank_name;
 	const city=req.query.city; 
-	const client=new Client({
+	/*const client=new Client({
 		user:'postgres',
 		host:'localhost',
 		database:'newdb',
 		password:'password',
 		port:5432,
+	});*/
+	const client=new Pool({
+		connectionString:process.env.DATABASE_URL,
+		ssl:true
 	});
 
 	client.connect();
