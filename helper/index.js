@@ -1,7 +1,8 @@
 const jwt=require('jsonwebtoken')
 
 exports.authenticate=(req,res,next)=>{
-  let token=req.headers['authorization'];
+  let token=req.headers['authorization']||req.query.authorization;
+  console.log(req.query.authorization);
 	if(token!=undefined && token.startsWith('Bearer'))
 	{
 		token=token.slice(7,token.length);
