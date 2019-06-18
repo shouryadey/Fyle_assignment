@@ -1,5 +1,5 @@
 const express=require('express');
-const {getbankdetails,getbranchdetails,login}=require('../controllers/post');
+const {getbankdetails,getbranchdetails,login,home}=require('../controllers/post');
 const {authenticate}=require('../helper')
 
 const router=express.Router();
