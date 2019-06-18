@@ -1,4 +1,4 @@
-## A Node.js REST service that fetches 
+### A Node.js REST service that fetches 
 
 1. A bank details ,given branch IFSC code 
 
@@ -16,7 +16,7 @@
 4. The JWT Token is : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
 
 ------------------------------------------------------------------------------------------------
-### URLs
+### URL
 1)The Hosting URL in Heroku: https://protected-plateau-55954.herokuapp.com/
 
 
