@@ -16,10 +16,12 @@ f) The JWT Token is : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZS
 ------------------------------------------------------------------------------------------------
 1)The Hosting URL in Heroku: https://protected-plateau-55954.herokuapp.com/
 
+
 2)To get bankdetails: 
   https://protected-plateau-55954.herokuapp.com/bankdetails?IFSC_code=ABHY0065001&limit=5&offset=0&authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
 
-3) To get branchdetails: 
+
+3)To get branchdetails: 
   https://protected-plateau-55954.herokuapp.com/branchdetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI&limit=5&offset=1&authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
 
 ---------------------------------------------------------------------------------------------------
