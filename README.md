@@ -1,17 +1,17 @@
 A Node.js REST service that fetches 
 
-a) A bank details ,given branch IFSC code 
+1.A bank details ,given branch IFSC code 
 
-b) All details of branches ,given bank name and a city
+2. All details of branches ,given bank name and a city
   Both the services uses GET API to fetch the data,and also supports optional parameters limit and offset.
 
-c) APIs are autthenticated using JWT token ,valid for 5 days.
+3. APIs are autthenticated using JWT token ,valid for 5 days.
 
-d) PostgreSQL is used as bankend. 
+4. PostgreSQL is used as bankend. 
 
-e) All the data are passed as query parameters
+5. All the data are passed as query parameters
 
-f) The JWT Token is : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
+6. The JWT Token is : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
 
 ------------------------------------------------------------------------------------------------
 1)The Hosting URL in Heroku: https://protected-plateau-55954.herokuapp.com/
