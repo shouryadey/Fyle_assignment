@@ -1,8 +1,9 @@
 ### A Node.js REST service that fetches 
 
-1. A bank details ,given branch IFSC code 
+1. Bank details ,given branch IFSC code.
 
-2. All details of branches ,given bank name and a city
+2. All details of branches ,given bank name and a city.
+
    Both the services uses GET API to fetch the data,and also supports optional parameters limit and offset.
 ----------------------------------------------------------------------------------------------
 ### Details:
@@ -11,7 +12,7 @@
 
 2. PostgreSQL is used as bankend. 
 
-3. All datas are passed as query parameters
+3. All datas are passed as query parameters.
 
 4. The JWT Token is : Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
 
