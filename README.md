@@ -15,7 +15,7 @@
 3. All datas are passed as query parameters.
 
 4. The JWT Token is : Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU
-
+#### Note:The JWT has been passed as query parameter,it can aslo be passed as Authorization Header for convenience in terms of secuirty.
 ------------------------------------------------------------------------------------------------
 ### URL:
 1)The Hosting URL in Heroku: https://protected-plateau-55954.herokuapp.com/
