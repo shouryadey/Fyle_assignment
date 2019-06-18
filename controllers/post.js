@@ -13,7 +13,7 @@ exports.getbankdetails=(req,res)=>{
 		offset=null;
 	const ifsc=req.query.IFSC_code;
 	//console.log(ifsc);
-/*const client=new Client({
+	/*const client=new Client({
 		user:'postgres',
 		host:'localhost',
 		database:'newdb',
@@ -42,12 +42,12 @@ exports.getbankdetails=(req,res)=>{
 		  })
 		  .then(()=>{
 			  client.end();
-			  console.log("DATABASED CLOSED")}
-		    );
+			 // console.log("DATABASED CLOSED")
+			});
 };
 
 exports.getbranchdetails=(req,res)=>{
-	//console.log(req.query);
+	console.log(req.query);
 	let limit=req.query.limit;
 	let offset=req.query.offset;
 	
@@ -58,7 +58,7 @@ exports.getbranchdetails=(req,res)=>{
 
 	const bank_name=req.query.bank_name;
 	const city=req.query.city; 
-	/*const client=new Client({
+		/*const client=new Client({
 		user:'postgres',
 		host:'localhost',
 		database:'newdb',
@@ -69,6 +69,7 @@ exports.getbranchdetails=(req,res)=>{
 		connectionString:process.env.DATABASE_URL,
 		ssl:true
 	});
+
 
 	client.connect();
 	let Query="SELECT * FROM bank_branches WHERE bank_name='"+bank_name+"' AND city='"+city+"' LIMIT "+limit+" OFFSET "+offset;
@@ -87,8 +88,8 @@ exports.getbranchdetails=(req,res)=>{
 		  })
 		  .then(()=>{
 			  client.end();
-			  console.log("DATABASED CLOSED")}
-		    );
+			//  console.log("DATABASED CLOSED")
+			});
 };
 
 exports.login=(req,res)=>{
@@ -98,7 +99,7 @@ exports.login=(req,res)=>{
 	//console.log(token);
 
 	res.json({
-		message:"Token  recieved",
+		message:"Token recieved",
 		token:token
 	});
 
