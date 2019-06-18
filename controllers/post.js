@@ -104,4 +104,6 @@ exports.login=(req,res)=>{
 	});
 
 }
-
+exports.home=()=>{
+	res.send('HOSTING URL');
+}
