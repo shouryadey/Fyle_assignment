@@ -38,7 +38,7 @@ https://protected-plateau-55954.herokuapp.com/branchdetails?bank_name=ABHYUDAYA%
 
 curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU" https://protected-plateau-55954.herokuapp.com/bankdetails?IFSC_code=ABHY0065001"&"limit=5"&"offset=0
 
-#####                OR
+#####  OR
 
 ###### *Passing JWT as a part of query string*
 
@@ -50,7 +50,7 @@ curl https://protected-plateau-55954.herokuapp.com/bankdetails?IFSC_code=ABHY006
 
 curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU" https://protected-plateau-55954.herokuapp.com/branchdetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED"&"city=MUMBAI"&"limit=5"&"offset=0
 
-#####                  OR
+#####  OR
 
 ###### *Passing JWT as a part of query string*
 
