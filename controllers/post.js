@@ -105,12 +105,5 @@ exports.login=(req,res)=>{
 
 }
 exports.home=(req,res)=>{
-	res.send('HOSTING URL'+'\n\n'+
-	'Examples'+'\n\n'+
-	'1)To get bankdetails with IFSC code =ABHY0065001 ,limit =5, offset= 0 :'+'\n\n'+
-	 ' https://protected-plateau-55954.herokuapp.com/bankdetails?IFSC_code=ABHY0065001&limit=5&offset=0&authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU'+'\n\n'+
-
-	'2)To get branchdetails with bankname=ABHYUDAYA COOPERATIVE BANK LIMITED,city=MUMBAI,limit=5,offset=1:'+'\n\n'+
-	 ' https://protected-plateau-55954.herokuapp.com/branchdetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI&limit=5&offset=1&authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU'
-);
+	res.send('HOSTING URL');
 }
