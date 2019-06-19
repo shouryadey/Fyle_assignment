@@ -9,15 +9,19 @@
 ##### 1) Go to the directory where the bash files are present ,in this case Curl Scripts directory
 ##### 2) Open Terminal
 #######  *i Execute the script branchdetails.sh in terminal*
+        
         $ ./branchdetails.sh
 
 #######  *ii   The user will be prompted for bank_name*
-        $ bank_name : 
+       
+       $ bank_name : 
 
 ####### *iii Enter bank name*
-        $ bank_name : ABHYUDAYA COOPERATIVE BANK LIMITED
+       
+       $ bank_name : ABHYUDAYA COOPERATIVE BANK LIMITED
 
 #######  *iV  Similarly enter city,limits,offset(limits and offsets are optional parameters)*
+       
         $ city : NAVI MUMBAI
         $ limit : 5
         $ offset : 0
@@ -28,6 +32,7 @@
 
 
 #######   *vi The user will be prompted to continue by pressing '1'( without the single quotes) and quit by pressing '0'*
+        
         Pressing 1 would start the process form step ii and pressing 0 would end the execution
    
 
