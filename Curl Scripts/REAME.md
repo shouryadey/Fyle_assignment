@@ -1,3 +1,6 @@
+#### NOTE: Before using the scripts make sure to locate to Curl Script directory and the change the permissions using commands chmod e.g 
+      $ chmod 777 bankdetails.sh
+      $ chmod 777 branchdetails.sh
 #### To run Curl scripts 
  
 #####  1) execute the bash files e.g. bankdetails.sh ,branchdetails.sh without any arguements.
