@@ -47,7 +47,7 @@ exports.getbankdetails=(req,res)=>{
 };
 
 exports.getbranchdetails=(req,res)=>{
-	console.log(req.query);
+	//console.log(req.query);
 	let limit=req.query.limit;
 	let offset=req.query.offset;
 	
