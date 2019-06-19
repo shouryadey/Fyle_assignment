@@ -41,7 +41,7 @@ curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
 
 ----------------------------------------------------------------------------------------------------
 ### To run Curl scripts in terminal 
-   ##### Check the directory name Curl Scripts ,it contains 3 items:
+   ##### Check the directory named Curl Scripts ,it contains 3 items:
       1) bankdetails.sh file to call GET API to fetch bank details using curl 
       2) branchdetails.sh file to call GET API to fetch branch details using curl
       3) Documentation on how to use the scripts using a walkthrough example.
