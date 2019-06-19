@@ -45,4 +45,4 @@
         Pressing 1 would start the process form step ii and pressing 0 would end the execution
    
 -----------------------------------------------------------------------------------------------------------
-####  NOTE: For bankdetails.sh the simlar proceures will be followed ,the parameters the user will be prompted to input are IFSC_code,limit and offset(limit and offset are optional)
+####  NOTE: For bankdetails.sh the simlar proceures will be followed ,the parameters the user will be prompted to input are IFSC_code,limit and offset (limit and offset are optional)
