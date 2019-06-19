@@ -1,13 +1,14 @@
-### To run Curl scripts 
-#### 1) execute the bash file ex. bankdetails.sh ,branchdetails.sh without any arguements
-#### 2) The user will prompted to enter inputs ex. In case of bankdetails.sh ,the user will be promtpted to input IFSC_code,limits and offset
-#### 3) after receiving of data,the user will be prompted to continue using the same script using the option '1' or else quit the execution of the script using '0'.
+#### To run Curl scripts 
+ 1) execute the bash file ex. bankdetails.sh ,branchdetails.sh without any arguements
+ 
+ 2) The user will prompted to enter inputs ex. In case of bankdetails.sh ,the user will be promtpted to input      IFSC_code,limits and offset
+ 
+ 3) after receiving of data,the user will be prompted to continue using the same script using the option '1' or else quit the execution of the script using '0'.
 ------------------------------------------------------------------------------------------------------
-### A walkthrough for branchdetails.sh
-#### 1) Go to the directory where the bash files are present ,in this case Curl Scripts directory
-#### 2) Open Terminal
-  In terminal-
-#####  i Execute the script branchdetails.sh 
+#### A walkthrough with branchdetails.sh
+##### 1) Go to the directory where the bash files are present ,in this case Curl Scripts directory
+##### 2) Open Terminal
+#####  i Execute the script branchdetails.sh in terminal-
         $ ./branchdetails.sh
 
 #####  ii   The user will be prompted for bank_name
