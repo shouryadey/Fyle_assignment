@@ -16,11 +16,11 @@
        
        $ bank_name : 
 
-###### *iii Enter bank name*
+###### *iii Enter bank name the press enter*
        
        $ bank_name : ABHYUDAYA COOPERATIVE BANK LIMITED
 
-######  *iV  Similarly enter city,limits,offset(limits and offsets are optional parameters)*
+######  *iV  Similarly enter city,limits,offset(limits and offsets are optional parameters) then press enter*
        
         $ city : NAVI MUMBAI
         $ limit : 5
