@@ -9,7 +9,7 @@
 ------------------------------------------------------------------------------------------------------
 #### A walkthrough with branchdetails.sh
 
-##### 1) Go to the directory where the bash files are located, in this case Curl_Scripts directory
+##### 1) Go to the directory where the bash files are located, in this case Curl Scripts directory
 
 ##### 2) Open Terminal
 
