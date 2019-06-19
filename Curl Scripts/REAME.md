@@ -8,26 +8,26 @@
 #### A walkthrough with branchdetails.sh
 ##### 1) Go to the directory where the bash files are present ,in this case Curl Scripts directory
 ##### 2) Open Terminal
-#####  *i Execute the script branchdetails.sh in terminal*
+#######  *i Execute the script branchdetails.sh in terminal*
         $ ./branchdetails.sh
 
-#####  *ii   The user will be prompted for bank_name*
+#######  *ii   The user will be prompted for bank_name*
         $ bank_name : 
 
-#####  *iii Enter bank name*
+####### *iii Enter bank name*
         $ bank_name : ABHYUDAYA COOPERATIVE BANK LIMITED
 
-#####  *iV  Similarly enter city,limits,offset(limits and offsets are optional parameters)*
+#######  *iV  Similarly enter city,limits,offset(limits and offsets are optional parameters)*
         $ city : NAVI MUMBAI
         $ limit : 5
         $ offset : 0
 
-#####   *V Wait until you can see the response  without  pressing any key(as it could cause the execution to stop)*
+#######   *V Wait until you can see the response  without  pressing any key(as it could cause the execution to stop)*
      
      {"message":"success,branch details received","result":[{"ifsc":"ABHY0065044","bank_id":"60","branch":"GHANSOLI","address":"SHREE MANOSHI COMPLEX, PLOT NO.5& 6, SECTOR-3, GHANSOLI, NAVI MUMBAI GHANSOLI- 410 701.","city":"NAVI MUMBAI","district":"THANE","state":"MAHARASHTRA","bank_name":"ABHYUDAYA COOPERATIVE BANK LIMITED"},{"ifsc":"ABHY0065045","bank_id":"60","branch":"KAMOTHE","address":"DHARTI COMPLEX, SHOP NO.7,8,9310 & 11, PLOT NO. 60/61, SECTOR 18, KAMOTHE II, PANVEL-","city":"NAVI MUMBAI","district":"RAIGAD","state":"MAHARASHTRA","bank_name":"ABHYUDAYA COOPERATIVE BANK LIMITED"}]}
 
 
-#####   *vi The user will be prompted to continue by pressing '1'( without the single quotes) and quit by pressing '0'*
+#######   *vi The user will be prompted to continue by pressing '1'( without the single quotes) and quit by pressing '0'*
         Pressing 1 would start the process form step ii and pressing 0 would end the execution
    
 
