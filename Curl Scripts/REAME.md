@@ -3,7 +3,7 @@
       $ chmod 777 branchdetails.sh
 #### To run Curl scripts 
  
-#####  1) execute the bash files e.g. bankdetails.sh ,branchdetails.sh without any arguements.
+#####  1) Execute the bash files e.g. bankdetails.sh ,branchdetails.sh without any arguements.
  
 #####  2) After exexuting the scripts the user will prompted to enter inputs e.g. In case of bankdetails.sh ,the user will be promtpted to input IFSC_code,limits and offset.
 
