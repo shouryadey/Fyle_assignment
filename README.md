@@ -44,7 +44,7 @@ curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
       https://protected-plateau-55954.herokuapp.com/tokenrequest
 
 ######  The format for curl query is :
-   curl   --header   "Authorization: Bearer  <token> "    <url+query_parameters>
+      curl   --header   "Authorization: Bearer  <token> "    <url+query_parameters>
 
 ----------------------------------------------------------------------------------------------------
 ### To run Curl scripts in terminal 
