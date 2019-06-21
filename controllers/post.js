@@ -1,21 +1,14 @@
 const bdp=require('body-parser');
 const jwt=require('jsonwebtoken')
-const {Pool,Client}=require('pg');
+const {Pool}=require('pg');
 
 constring=process.env.DATABASE_URL
-
 
 const pool=new Pool({
 		connectionString:constring,
 		ssl:true,
-		poolSize:10,
-		reconnectOnDatabaseIsStartingError: true,         // Enable/disable reconnecting on "the database system is starting up" errors
-  		waitForDatabaseStartupMillis: 0,                  // Milliseconds to wait between retry connection attempts while the database is starting up
-  		databaseStartupTimeoutMillis: 9000,              // If connection attempts continually return "the database system is starting up", this is the total number of milliseconds to wait until an error is thrown.
-  		reconnectOnReadOnlyTransactionError: true,        // If the query should be retried when the database throws "cannot execute X in a read-only transaction"
-  		waitForReconnectReadOnlyTransactionMillis: 0,     // Milliseconds to wait between retry queries while the connection is marked as read-only
-  		readOnlyTransactionReconnectTimeoutMillis: 90000,
-  	});
+		poolSize:10
+	  });
 
 exports.getbankdetails=(req,res)=>{
 	//console.log(req.query);
