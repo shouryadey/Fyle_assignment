@@ -39,10 +39,16 @@ curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
 
 curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJuYW1lIiwiaWF0IjoxNTYwODc1MTUxLCJleHAiOjE1NjEzMDcxNTF9.EzMbWG7x4J-s_SzYsoSRR7x1_sUixqZNDzPhXyTbacU" https://protected-plateau-55954.herokuapp.com/branchdetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED"&"city=MUMBAI"&"limit=5"&"offset=0
 
+#### NOTE:
+      In case the token expires one can get a new token using the service https://protected-plateau-55954.herokuapp.com/tokenrequest
+      The format for curl query is :
+      curl --header "Authorization: Bearer <token> <url+query_parameters>
+
 ----------------------------------------------------------------------------------------------------
 ### To run Curl scripts in terminal 
    ##### Check the directory named Curl Scripts ,it contains 3 items:
       1) bankdetails.sh file to call GET API to fetch bank details using curl 
       2) branchdetails.sh file to call GET API to fetch branch details using curl
       3) Documentation on how to use the scripts using a walkthrough example.
+
    
