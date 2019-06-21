@@ -43,7 +43,7 @@ curl --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
     
    In case the token expires one can get a new token using the service https://protected-plateau-55954.herokuapp.com/tokenrequest
 
-#######  The format for curl query is :
+######  The format for curl query is :
    curl --header "Authorization: Bearer <token> <url+query_parameters>
 
 ----------------------------------------------------------------------------------------------------
