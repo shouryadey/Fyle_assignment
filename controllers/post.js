@@ -2,6 +2,20 @@ const bdp=require('body-parser');
 const jwt=require('jsonwebtoken')
 const {Pool,Client}=require('pg');
 
+constring=process.env.DATABASE_URL
+
+const pool=new Pool({
+		connectionString:constring,
+		ssl:true,
+		poolSize:10,
+		reconnectOnDatabaseIsStartingError: true,         // Enable/disable reconnecting on "the database system is starting up" errors
+  		waitForDatabaseStartupMillis: 0,                  // Milliseconds to wait between retry connection attempts while the database is starting up
+  		databaseStartupTimeoutMillis: 9000,              // If connection attempts continually return "the database system is starting up", this is the total number of milliseconds to wait until an error is thrown.
+  		reconnectOnReadOnlyTransactionError: true,        // If the query should be retried when the database throws "cannot execute X in a read-only transaction"
+  		waitForReconnectReadOnlyTransactionMillis: 0,     // Milliseconds to wait between retry queries while the connection is marked as read-only
+  		readOnlyTransactionReconnectTimeoutMillis: 90000,
+  	});
+
 exports.getbankdetails=(req,res)=>{
 	//console.log(req.query);
 	let limit=req.query.limit;
@@ -20,31 +34,34 @@ exports.getbankdetails=(req,res)=>{
 		password:'password',
 		port:5432,
 	});*/
-	const client=new Pool({
-		connectionString:process.env.DATABASE_URL,
-		ssl:true
-	});
-
-	client.connect();
+	
 	let Query="SELECT * FROM bank_branches WHERE ifsc='"+ifsc+"' LIMIT "+limit+" OFFSET "+offset;
-	//console.log(Query);
-	client.query(Query)
-		  .then(result=>{
+
+	pool.connect((err,client,done)=>{
+		if(err)
+		{
+			res.json({
+				message:'connection error',
+				error:err
+			});
+		}
+
+		client.query(Query,(err,result)=>{
+			done();
+			if(err)
+			{
 				res.json({
-				message:"success,bank details received",
+				message:"failure,data not retrieved"
+				});
+			}
+			res.json({
+				message:"success,branch details received",
 				result:result.rows
 				});
-			})
-		  .catch(()=>{
-			res.json({
-				message:"failure,data not retrieved"
-			});
-		  })
-		  .then(()=>{
-			  client.end();
-			 // console.log("DATABASED CLOSED")
-			});
+		});
+	});
 };
+
 
 exports.getbranchdetails=(req,res)=>{
 	//console.log(req.query);
@@ -65,31 +82,32 @@ exports.getbranchdetails=(req,res)=>{
 		password:'password',
 		port:5432,
 	});*/
-	const client=new Pool({
-		connectionString:process.env.DATABASE_URL,
-		ssl:true
-	});
-
-
-	client.connect();
-	let Query="SELECT * FROM bank_branches WHERE bank_name='"+bank_name+"' AND city='"+city+"' LIMIT "+limit+" OFFSET "+offset;
 	
-	client.query(Query)
-		  .then(result=>{
+	let Query="SELECT * FROM bank_branches WHERE bank_name='"+bank_name+"' AND city='"+city+"' LIMIT "+limit+" OFFSET "+offset;
+
+	pool.connect((err,client,done)=>{
+		if(err)
+		{
+			res.json({
+				message:'connection error',
+				error:err
+			});
+		}
+
+		client.query(Query,(err,result)=>{
+			done();
+			if(err)
+			{
 				res.json({
+				message:"failure,data not retrieved"
+				});
+			}
+			res.json({
 				message:"success,branch details received",
 				result:result.rows
 				});
-			})
-		  .catch((e)=>{
-			res.json({
-				message:"failure,data not retrieved"
-			});
-		  })
-		  .then(()=>{
-			  client.end();
-			//  console.log("DATABASED CLOSED")
-			});
+		});
+	});
 };
 
 exports.login=(req,res)=>{
@@ -107,3 +125,4 @@ exports.login=(req,res)=>{
 exports.home=(req,res)=>{
 	res.send('HOSTING URL');
 }
+
