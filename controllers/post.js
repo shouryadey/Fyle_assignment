@@ -4,7 +4,8 @@ const {Pool}=require('pg');
 
 constring=process.env.DATABASE_URL
 
-// A single pool is created that has capacity for atmost  10 concurrent connections.
+// A single pool is created that has a capacity for atmost  10 concurrent connections.
+//The pool object is created that will be used by every query in the functions getbankdetails and getbranchdetails
 const pool=new Pool({
 		connectionString:constring,
 		ssl:true,
@@ -25,9 +26,10 @@ exports.getbankdetails=(req,res)=>{
 	
 	let Query="SELECT * FROM bank_branches WHERE ifsc='"+ifsc+"' LIMIT "+limit+" OFFSET "+offset;
 
-// connect(err,client,release ) ->Acquires a client from the pool. If the pool is 'full' and all clients are 
-//currently checked out, this will wait until a client becomes available by it being released back to the pool.
-//If the pool is not full a new client will be created & returned to this callback.
+// connect(err,client,release ) ->Acquires a client from the pool. 
+//If the pool is 'full' and all clients are currently checked out, this will wait until a client becomes 
+//available by it being released back to the pool.If the pool is not full a new client will be created & returned to 
+//this callback.
 
 	pool.connect((err,client,release)=>{
 		if(err)
