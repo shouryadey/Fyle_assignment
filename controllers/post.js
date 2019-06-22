@@ -4,14 +4,15 @@ const {Pool}=require('pg');
 
 constring=process.env.DATABASE_URL
 
+// A single pool is created that has capacity for atmost  10 concurrent connections.
 const pool=new Pool({
 		connectionString:constring,
 		ssl:true,
-		poolSize:10
+		max:10
 	  });
 
 exports.getbankdetails=(req,res)=>{
-	//console.log(req.query);
+	
 	let limit=req.query.limit;
 	let offset=req.query.offset;
 	
@@ -20,18 +21,15 @@ exports.getbankdetails=(req,res)=>{
 	if(offset==undefined|| offset.trim()=="")
 		offset=null;
 	const ifsc=req.query.IFSC_code;
-	//console.log(ifsc);
-	/*const client=new Client({
-		user:'postgres',
-		host:'localhost',
-		database:'newdb',
-		password:'password',
-		port:5432,
-	});*/
+
 	
 	let Query="SELECT * FROM bank_branches WHERE ifsc='"+ifsc+"' LIMIT "+limit+" OFFSET "+offset;
 
-	pool.connect((err,client,done)=>{
+// connect(err,client,release ) ->Acquires a client from the pool. If the pool is 'full' and all clients are 
+//currently checked out, this will wait until a client becomes available by it being released back to the pool.
+//If the pool is not full a new client will be created & returned to this callback.
+
+	pool.connect((err,client,release)=>{
 		if(err)
 		{
 			res.json({
@@ -41,7 +39,8 @@ exports.getbankdetails=(req,res)=>{
 		}
 
 		client.query(Query,(err,result)=>{
-			done();
+//The release Callback releases an acquired client back to the pool. 
+			release()
 			if(err)
 			{
 				res.json({
@@ -58,7 +57,7 @@ exports.getbankdetails=(req,res)=>{
 
 
 exports.getbranchdetails=(req,res)=>{
-	//console.log(req.query);
+
 	let limit=req.query.limit;
 	let offset=req.query.offset;
 	
@@ -69,17 +68,11 @@ exports.getbranchdetails=(req,res)=>{
 
 	const bank_name=req.query.bank_name;
 	const city=req.query.city; 
-		/*const client=new Client({
-		user:'postgres',
-		host:'localhost',
-		database:'newdb',
-		password:'password',
-		port:5432,
-	});*/
+	
 	
 	let Query="SELECT * FROM bank_branches WHERE bank_name='"+bank_name+"' AND city='"+city+"' LIMIT "+limit+" OFFSET "+offset;
 
-	pool.connect((err,client,done)=>{
+	pool.connect((err,client,release)=>{
 		if(err)
 		{
 			res.json({
@@ -89,7 +82,7 @@ exports.getbranchdetails=(req,res)=>{
 		}
 
 		client.query(Query,(err,result)=>{
-			done();
+			release()
 			if(err)
 			{
 				res.json({
@@ -106,9 +99,8 @@ exports.getbranchdetails=(req,res)=>{
 
 exports.login=(req,res)=>{
 	
-	//console.log("In Login");
 	let token=jwt.sign({username:'username'},'secret',{expiresIn:"5d"});
-	//console.log(token);
+	
 
 	res.json({
 		message:"Token recieved",
